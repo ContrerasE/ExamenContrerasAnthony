@@ -1,0 +1,24 @@
+<section class="info">
+    <h1 style="padding-bottom: 20px;">CALL <small> Center</small></h1>
+    <div class="col animated fadeIn fast" *ngFor="let registro of registros; let i=index">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{registro.code}}</h5>
+                        <p class="card-text" style="text-align: justify;">{{registro.fecha}}</p>
+                        <p class="card-text">
+                            <small class="text-body-secondary">
+                            {{registro.cliente}}
+                          <br>{{registro.tipointer}}
+                          <br>{{registro.descripcion}}
+                        </small></p>
+                        <button (click)="VerReg(i)" type="button" class="btn btn-primary" style="padding-left: 15px; padding-right: 15px;"> +info </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
